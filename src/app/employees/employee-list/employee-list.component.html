@@ -1,0 +1,17 @@
+<table class="table">
+<thead>
+    <tr>
+    <th>Name</th>
+    <th>Position</th>
+    <th>Mobile No.</th>
+    </tr>
+</thead>
+    <tbody>
+        <tr *ngFor="let emp of service.list">
+        <td (click)="populateForm(emp)">{{emp.Code}}-{{emp.Fullname}}</td>
+        <td (click)="populateForm(emp)">{{emp.Position}}</td>
+        <td (click)="populateForm(emp)">{{emp.Mobile_No}}</td>
+        <td (click)="deleteForm(emp.ID)"><button class="btn btn-sm btn-outline-danger">X</button></td>
+    </tr>
+    </tbody>
+</table>
